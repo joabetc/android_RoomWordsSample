@@ -1,15 +1,23 @@
 package com.joabe.roomwordssample.model.entity;
 
 import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+@Entity(tableName = "word_table")
 public class Word {
-    private String word;
+
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "word")
+    private String mWord;
 
     public Word(@NonNull String word) {
-        this.word = word;
+        this.mWord = word;
     }
 
     public String getWord() {
-        return this.word;
+        return this.mWord;
     }
 }
