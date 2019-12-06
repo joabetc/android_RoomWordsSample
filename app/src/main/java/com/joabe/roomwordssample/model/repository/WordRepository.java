@@ -16,13 +16,13 @@ public class WordRepository {
     private WordDao mWordDao;
     private LiveData<List<Word>> mAllWords;
 
-    WordRepository(Application application) {
+    public WordRepository(Application application) {
         WordRoomDatabase db = WordRoomDatabase.getDatabase(application);
         mWordDao = db.wordDao();
         mAllWords = mWordDao.getAllWords();
     }
 
-    LiveData<List<Word>> getmAllWords() {
+    public LiveData<List<Word>> getAllWords() {
         return mAllWords;
     }
 
