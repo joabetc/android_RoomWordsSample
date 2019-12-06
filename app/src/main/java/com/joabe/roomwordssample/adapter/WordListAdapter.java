@@ -19,7 +19,7 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
     private final LayoutInflater mInflater;
     private List<Word> mWords;
 
-    WordListAdapter(Context context) {
+    public WordListAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
     }
 
