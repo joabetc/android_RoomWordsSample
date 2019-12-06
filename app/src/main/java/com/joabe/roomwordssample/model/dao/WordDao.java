@@ -1,5 +1,6 @@
 package com.joabe.roomwordssample.model.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -18,5 +19,5 @@ public interface WordDao {
     void deteleAll();
 
     @Query("SELECT * FROM word_table ORDER BY word ASC")
-    List<Word> getAllWords();
+    LiveData<List<Word>> getAllWords();
 }
