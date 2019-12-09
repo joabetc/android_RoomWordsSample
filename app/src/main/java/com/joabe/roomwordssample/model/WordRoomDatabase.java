@@ -52,9 +52,10 @@ public abstract class WordRoomDatabase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(final Void... params) {
-            mDao.deteleAll();
 
             if (mDao.getAnyWord().length < 1) {
+                mDao.deteleAll();
+
                 for (int i = 0; i < words.length - 1; i++) {
                     Word word = new Word(words[i]);
                     mDao.insert(word);
