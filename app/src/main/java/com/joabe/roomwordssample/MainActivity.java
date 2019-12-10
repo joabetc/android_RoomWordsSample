@@ -79,6 +79,14 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+        if (id == R.id.clear_data) {
+            Toast.makeText(this, R.string.clearing_data,
+                    Toast.LENGTH_SHORT).show();
+
+            mWordViewModel.deleteAll();
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
